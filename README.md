@@ -1,6 +1,6 @@
 # The Hoyt Wire - Fantasy Football Blog
 
-**12 Managers • 18 Weeks • ∞ Storylines**
+**10 Managers • 17 Weeks • ∞ Storylines**
 
 This repository contains the source code for "The Hoyt Wire," a fantasy football blog built with [Astro](https://astro.build/). The project is designed for easy local development and containerized deployment using Docker.
 
