@@ -1,0 +1,96 @@
+---
+// Clean horizontal scoreboard for weekly matchups
+---
+
+<div class="scoreboard">
+  <div class="scoreboard-content">
+    <span class="week-label">WEEK 1 FINAL:</span>
+    <div class="matchups">
+      <span class="matchup">anorum 191.26 - 129.53 mpvuk</span>
+      <span class="separator">|</span>
+      <span class="matchup">rjgillin13 151.37 - 87.12 lindspfeif</span>
+      <span class="separator">|</span>
+      <span class="matchup">mtcain9 96.52 - 79.68 tp2222</span>
+    </div>
+    <span class="highlight">HIGH: 191.26 | LOW: 79.68</span>
+  </div>
+</div>
+
+<style>
+  .scoreboard {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #fbbf24;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .scoreboard-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    color: #374151;
+  }
+
+  .week-label {
+    font-weight: 700;
+    color: #1f2937;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .matchups {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .matchup {
+    font-weight: 600;
+    color: #4b5563;
+    white-space: nowrap;
+  }
+
+  .separator {
+    color: #9ca3af;
+    font-weight: 400;
+  }
+
+  .highlight {
+    font-weight: 700;
+    color: #fbbf24;
+    background: #fffbeb;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    border: 1px solid #fde68a;
+  }
+
+  @media (max-width: 768px) {
+    .scoreboard-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .matchups {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+
+    .separator {
+      display: none;
+    }
+
+    .matchup {
+      font-size: 0.8rem;
+    }
+  }
+</style>
