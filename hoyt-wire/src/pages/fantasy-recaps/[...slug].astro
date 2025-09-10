@@ -1,15 +1,18 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection, render, getEntry } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
-export async function getStaticPaths() {
-  const recapEntries = await getCollection('fantasy-recaps');
-  return recapEntries.map(entry => ({
-    params: { slug: entry.id }, props: { entry },
-  }));
+// Get the slug from the URL parameters
+const { slug } = Astro.params;
+
+// Fetch the entry based on the slug
+const entry = await getEntry('fantasy-recaps', slug as string);
+
+// If no entry found, return 404
+if (!entry) {
+  return Astro.redirect('/404');
 }
 
-const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
 
